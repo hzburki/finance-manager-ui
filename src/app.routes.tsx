@@ -12,6 +12,7 @@ import {
   IndexScreen,
   LoginScreen,
   TransactionScreen,
+  ForgotPasswordScreen,
 } from "./screens";
 
 import { DashboardLayout } from "./components";
@@ -21,6 +22,7 @@ const AppRoutes = createBrowserRouter(
     <Route element={<Outlet />} errorElement={<ErrorScreen />}>
       <Route index element={<IndexScreen />} />
       <Route path="/login" element={<LoginScreen />} />
+      <Route path="/forgot-password" element={<ForgotPasswordScreen />} />
 
       <Route path="/" element={<DashboardLayout />}>
         <Route path="/home" element={<HomeScreen />} />
