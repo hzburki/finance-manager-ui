@@ -10,7 +10,7 @@ export default withMT(
     theme: {
       extend: {
         boxShadow: {
-          'r-md': "2px 0px 3px 1px #00000024"
+          'r-md': "1px 0px 3px 1px #00000024"
         }
       },
     },

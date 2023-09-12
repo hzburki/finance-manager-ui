@@ -1,20 +1,30 @@
-import { IconButton, Navbar, Typography } from "@material-tailwind/react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
+import {
+  Drawer,
+  IconButton,
+  Navbar,
+  Typography,
+} from "@material-tailwind/react";
 
 export default function DashboardLayout() {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const toggleDrawer = () => setOpen(!open);
+
   return (
-    <div className="min-h-screen flex flex-row">
-      {/* Side Menu */}
-      <div className="w-20 min-h-full z-10 shadow-r-md">
-        <div className="flex py-4 justify-center">
-          <IconButton variant="text">
+    <div className="flex flex-col bg-blue-gray-50 min-h-screen">
+      {/* Navbar */}
+      <Navbar className="rounded-none min-w-full px-0 py-0 h-20 flex flex-row justify-start items-center shadow-none bg-white border-b border-b-gray-400">
+        <div className="flex justify-center items-center h-full w-20">
+          <IconButton variant="text" onClick={toggleDrawer}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-8 h-8 text-lg"
+              className="w-8 h-8 text-gray-800"
             >
               <path
                 strokeLinecap="round"
@@ -24,8 +34,18 @@ export default function DashboardLayout() {
             </svg>
           </IconButton>
         </div>
-        <div className="flex justify-start items-center gap-y-4 py-4 flex-col">
-          <IconButton variant="text">
+
+        <div className="flex flex-grow flex-row h-full px-4 items-center">
+          <Typography variant="h5" className="text-gray-800">
+            Finance Manager
+          </Typography>
+        </div>
+      </Navbar>
+
+      <div className="flex flex-row flex-grow min-h-full">
+        {/* Side Menu */}
+        <div className="hidden lg:flex justify-start bg-white w-20 min-h-full shadow-r-md border-r border-r-gray-400 items-center gap-y-4 py-4 flex-col">
+          <IconButton variant="text" className="text-gray-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -74,17 +94,41 @@ export default function DashboardLayout() {
             </svg>
           </IconButton>
         </div>
-      </div>
-      <div className="w-full overflow-auto">
-        {/* Navbar */}
-        <Navbar className="rounded-none min-w-full bg-white shadow-md">
-          <Typography color="gray">Welcome, John Doe</Typography>
-        </Navbar>
+
         {/* Children */}
-        <div className="bg-purple-50 min-h-full">
+        <div className="min-h-full">
           <Outlet />
         </div>
       </div>
+
+      {/* Drawer Menu */}
+      <Drawer open={open} onClose={toggleDrawer} className="p-4">
+        <div className="mb-6 flex items-center justify-between">
+          <Typography variant="h5" className="text-gray-800">
+            Finance Manager
+          </Typography>
+          <IconButton
+            variant="text"
+            className="text-gray-800"
+            onClick={toggleDrawer}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="h-5 w-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </IconButton>
+        </div>
+      </Drawer>
     </div>
   );
 }
