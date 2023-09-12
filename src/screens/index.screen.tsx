@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function WebsiteScreen() {
-  return <div>Website Screen</div>;
+export default function IndexScreen() {
+  return <div>Index Screen</div>;
 }

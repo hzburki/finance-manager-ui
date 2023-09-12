@@ -1,22 +1,32 @@
 import React from "react";
 import {
+  Outlet,
   Route,
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
 
-// Importing Screens
-import HomeScreen from "./screens/home.screen";
-import LoginScreen from "./screens/login.screen";
-import WebsiteScreen from "./screens/index.screen";
+import {
+  HomeScreen,
+  ErrorScreen,
+  IndexScreen,
+  LoginScreen,
+  TransactionScreen,
+} from "./screens";
+
+import { DashboardLayout } from "./components";
 
 const AppRoutes = createBrowserRouter(
   createRoutesFromElements(
-    <>
-      <Route path="/" element={<WebsiteScreen />} />
+    <Route element={<Outlet />} errorElement={<ErrorScreen />}>
+      <Route index element={<IndexScreen />} />
       <Route path="/login" element={<LoginScreen />} />
-      <Route path="/home" element={<HomeScreen />} />
-    </>
+
+      <Route path="/" element={<DashboardLayout />}>
+        <Route path="/home" element={<HomeScreen />} />
+        <Route path="/transactions" element={<TransactionScreen />} />
+      </Route>
+    </Route>
   )
 );
 
