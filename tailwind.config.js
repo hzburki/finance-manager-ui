@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 /** @type {import('tailwindcss').Config} */
