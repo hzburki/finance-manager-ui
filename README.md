@@ -3,16 +3,23 @@
 ---
 
 # Tasks 
-- [ ] Create a login page and form. 
-- [ ] Create the 
+- [x] Create a login page and form. 
+- [ ] Create layout for Dashbaord Screen
+  - [x] For Desktop
+  - [ ] For Mobiles
+  - [ ] Create all screens for the App
+  - [ ] Create all modals for the App
+- [ ] Integrate Login with API
+  - [ ] Create protected Routes
+- [ ] Create Add Transaction Form
+  - [ ] Integrate with Add Transaction API
 
 # Tech Stack
 
-- Bun (replacement for NodeJS)
-- ReactJS + Vite
-- TypeScript
+- [Bun](https://bun.sh/) 
+- Vite + React (with Typescript)
 - [Material Tailwind](https://www.material-tailwind.com/) UI Library
 
-## References
+## Secondary Libs
 
 - [TailwindCSS Shadow Generator](https://manuarora.in/boxshadows) CSS Utility 
