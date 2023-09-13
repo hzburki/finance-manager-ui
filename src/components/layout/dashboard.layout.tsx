@@ -21,7 +21,7 @@ export default function DashboardLayout() {
         <SideMenu />
 
         {/* Children */}
-        <div className="min-h-full">
+        <div className="min-h-full w-full">
           <Outlet />
         </div>
       </div>

@@ -1,5 +1,10 @@
 import React from "react";
-import { IconButton, Navbar, Typography } from "@material-tailwind/react";
+import {
+  Button,
+  IconButton,
+  Navbar,
+  Typography,
+} from "@material-tailwind/react";
 
 interface AppNavBarProps {
   toggleDrawer: () => void;
@@ -29,10 +34,25 @@ export default function AppNavBar(props: AppNavBarProps) {
         </IconButton>
       </div>
 
-      <div className="flex flex-grow flex-row h-full px-4 items-center">
-        <Typography variant="h5" className="text-gray-800">
-          Finance Manager
-        </Typography>
+      <div className="flex flex-grow flex-row justify-between h-full px-4 items-center">
+        {/* Left App Bar */}
+        <div>
+          <Typography variant="h5" className="text-gray-800">
+            Finance Manager
+          </Typography>
+        </div>
+
+        {/* Right App Bar */}
+        <div>
+          <Button variant="filled" size="sm">
+            <Typography
+              variant="button"
+              className="text-white text-sm font-medium"
+            >
+              Add Transaction
+            </Typography>
+          </Button>
+        </div>
       </div>
     </Navbar>
   );
