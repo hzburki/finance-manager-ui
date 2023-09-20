@@ -6,7 +6,7 @@
 - [x] Create a login page and form. 
 - [ ] Create layout for Dashbaord Screen
   - [x] For Desktop
-  - [ ] For Mobiles
+  - [x] For Mobiles
   - [ ] Create all screens for the App
   - [ ] Create all modals for the App
 - [ ] Integrate Login with API
