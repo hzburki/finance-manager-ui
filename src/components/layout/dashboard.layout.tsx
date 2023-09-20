@@ -5,6 +5,7 @@ import { Outlet } from "react-router-dom";
 import SideMenu from "./side-menu.comp";
 import AppNavBar from "./app-navbar.comp";
 import DrawerMenu from "./drawer-menu.comp";
+import BottomNavBar from "./bottom-navbar.comp";
 
 export default function DashboardLayout() {
   const [open, setOpen] = useState<boolean>(false);
@@ -28,6 +29,9 @@ export default function DashboardLayout() {
 
       {/* Drawer Menu */}
       <DrawerMenu open={open} toggleDrawer={toggleDrawer} />
+
+      {/* Bottom Nav Bar */}
+      <BottomNavBar />
     </div>
   );
 }

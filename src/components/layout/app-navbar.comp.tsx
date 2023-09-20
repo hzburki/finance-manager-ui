@@ -34,16 +34,22 @@ export default function AppNavBar(props: AppNavBarProps) {
         </IconButton>
       </div>
 
-      <div className="flex flex-grow flex-row justify-between h-full px-4 items-center">
+      <div className="flex flex-grow flex-row justify-center lg:justify-between h-full px-4 items-center">
         {/* Left App Bar */}
         <div>
-          <Typography variant="h5" className="text-gray-800">
+          <Typography
+            variant="h5"
+            // transform -translate-x-4
+            //  => Moves the text to the left to offset the hamburger icon.
+            //  => Wihtout this the title is not in the center of the screens.
+            className="text-gray-800 transform -translate-x-4 lg:-translate-x-0"
+          >
             Finance Manager
           </Typography>
         </div>
 
         {/* Right App Bar */}
-        <div>
+        <div className="hidden lg:block">
           <Button variant="filled" size="sm">
             <Typography
               variant="button"
