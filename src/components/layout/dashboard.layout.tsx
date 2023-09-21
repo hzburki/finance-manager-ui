@@ -18,7 +18,7 @@ export default function DashboardLayout() {
       <AppNavBar toggleDrawer={toggleDrawer} />
 
       <div className="flex flex-row flex-grow min-h-full">
-        {/* Side Menu */}
+        {/* Desktop Side Menu */}
         <SideMenu />
 
         {/* Children */}

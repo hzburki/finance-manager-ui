@@ -10,7 +10,13 @@ export default function DrawerMenu(props: DrawerMenuProps) {
   const { open, toggleDrawer } = props;
 
   return (
-    <Drawer open={open} onClose={toggleDrawer} className="p-4">
+    <Drawer
+      size={400}
+      open={open}
+      className="p-4"
+      onClose={toggleDrawer}
+      transition={{ type: "tween", duration: 0.3 }}
+    >
       <div className="mb-6 flex items-center justify-between">
         <Typography variant="h5" className="text-gray-800">
           Finance Manager
