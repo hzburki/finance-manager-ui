@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function ForgotPasswordScreen() {
+export const ForgotPasswordScreen = () => {
   return <div>ForgotPasswordScreen</div>;
-}
+};

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export const NAVIGATION_DATA = [
   {
     name: "Home",
-    path: "/",
+    path: "/home",
     svg: <HomeSVG />,
   },
   {

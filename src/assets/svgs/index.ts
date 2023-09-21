@@ -1,3 +1,4 @@
+export * from "./plus.svg"
 export * from "./home.svg"
 export * from "./report.svg"
 export * from "./budget.svg"

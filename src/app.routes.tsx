@@ -1,7 +1,7 @@
 import React from "react";
 import {
-  Outlet,
   Route,
+  Outlet,
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
@@ -11,6 +11,8 @@ import {
   ErrorScreen,
   IndexScreen,
   LoginScreen,
+  BudgetScreen,
+  ReportScreen,
   TransactionScreen,
   ForgotPasswordScreen,
 } from "./screens";
@@ -26,6 +28,8 @@ const AppRoutes = createBrowserRouter(
 
       <Route path="/" element={<DashboardLayout />}>
         <Route path="/home" element={<HomeScreen />} />
+        <Route path="/budgets" element={<BudgetScreen />} />
+        <Route path="/reports" element={<ReportScreen />} />
         <Route path="/transactions" element={<TransactionScreen />} />
       </Route>
     </Route>

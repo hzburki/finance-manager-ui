@@ -6,11 +6,11 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-interface AppNavBarProps {
+interface TopNavBarProps {
   toggleDrawer: () => void;
 }
 
-export default function AppNavBar(props: AppNavBarProps) {
+export default function TopNavBar(props: TopNavBarProps) {
   const { toggleDrawer } = props;
 
   return (
@@ -39,9 +39,9 @@ export default function AppNavBar(props: AppNavBarProps) {
         <div>
           <Typography
             variant="h5"
-            // transform -translate-x-4
-            //  => Moves the text to the left to offset the hamburger icon.
-            //  => Wihtout this the title is not in the center of the screens.
+            //? transform -translate-x-4
+            //?  => Moves the text to the left to offset the hamburger icon.
+            //?  => Wihtout this the title is not in the center of the screens.
             className="text-gray-800 transform -translate-x-4 lg:-translate-x-0"
           >
             Finance Manager

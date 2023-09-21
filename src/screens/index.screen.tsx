@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function IndexScreen() {
+export const IndexScreen = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -9,4 +9,4 @@ export default function IndexScreen() {
   }, []);
 
   return <div>Index Screen</div>;
-}
+};

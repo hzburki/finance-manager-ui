@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 // Custom Components
 import SideMenu from "./side-menu.comp";
-import AppNavBar from "./app-navbar.comp";
+import TopNavBar from "./top-navbar.comp";
 import DrawerMenu from "./drawer-menu.comp";
 import BottomNavBar from "./bottom-navbar.comp";
 
@@ -14,8 +14,8 @@ export default function DashboardLayout() {
 
   return (
     <div className="flex flex-col bg-blue-gray-50 min-h-screen">
-      {/* Navbar */}
-      <AppNavBar toggleDrawer={toggleDrawer} />
+      {/* Top Navbar */}
+      <TopNavBar toggleDrawer={toggleDrawer} />
 
       <div className="flex flex-row flex-grow min-h-full">
         {/* Desktop Side Menu */}
@@ -30,7 +30,7 @@ export default function DashboardLayout() {
       {/* Drawer Menu */}
       <DrawerMenu open={open} toggleDrawer={toggleDrawer} />
 
-      {/* Bottom Nav Bar */}
+      {/* Bottom NavBar */}
       <BottomNavBar />
     </div>
   );

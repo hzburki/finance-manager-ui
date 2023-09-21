@@ -23,7 +23,7 @@ const tabsData = [
   },
 ];
 
-export default function TransactionScreen() {
+export const TransactionScreen = () => {
   return (
     <div className="flex justify-center items-start py-12">
       <Card className="p-4 w-[600px] mx-4">
@@ -48,4 +48,4 @@ export default function TransactionScreen() {
       </Card>
     </div>
   );
-}
+};

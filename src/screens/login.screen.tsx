@@ -3,7 +3,7 @@ import { Typography } from "@material-tailwind/react";
 
 import { LoginForm } from "@/forms";
 
-export default function LoginScreen() {
+export const LoginScreen = () => {
   return (
     <div className="flex shadow-sm rounded-sm flex-col justify-center items-center min-h-screen">
       <div className="w-full max-w-sm">
@@ -19,4 +19,4 @@ export default function LoginScreen() {
       </div>
     </div>
   );
-}
+};
