@@ -8,12 +8,14 @@ export default function SideMenu() {
     <div className="hidden lg:flex justify-start bg-white w-20 min-h-full shadow-r-md border-r border-r-gray-400 items-center gap-y-4 py-4 flex-col">
       {NAVIGATION_DATA.map((nav, index) => {
         return (
-          <NavIconButton
-            key={index}
-            svg={nav.svg}
-            name={nav.name}
-            path={nav.path}
-          />
+          <div className="w-full">
+            <NavIconButton
+              key={index}
+              svg={nav.svg}
+              name={nav.name}
+              path={nav.path}
+            />
+          </div>
         );
       })}
     </div>
