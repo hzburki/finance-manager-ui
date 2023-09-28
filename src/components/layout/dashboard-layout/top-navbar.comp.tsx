@@ -5,6 +5,7 @@ import {
   Navbar,
   Typography,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 interface TopNavBarProps {
   toggleDrawer: () => void;
@@ -50,14 +51,16 @@ export default function TopNavBar(props: TopNavBarProps) {
 
         {/* Right App Bar */}
         <div className="hidden lg:block">
-          <Button variant="filled" size="sm">
-            <Typography
-              variant="button"
-              className="text-white text-sm font-medium"
-            >
-              Add Transaction
-            </Typography>
-          </Button>
+          <Link to="/add/transaction">
+            <Button variant="filled" size="sm">
+              <Typography
+                variant="button"
+                className="text-white text-sm font-medium"
+              >
+                Add Transaction
+              </Typography>
+            </Button>
+          </Link>
         </div>
       </div>
     </Navbar>

@@ -6,4 +6,4 @@ export * from "./report.screen"
 export * from "./budget.screen"
 export * from "./transactions.screen"
 export * from "./forgot-password.screen"
-
+export * from "./add-transaction.screen"
