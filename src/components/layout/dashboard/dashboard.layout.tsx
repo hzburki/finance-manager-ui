@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 // Custom Components
-import SideMenu from "./side-menu.comp";
-import TopNavBar from "./top-navbar.comp";
-import DrawerMenu from "./drawer-menu.comp";
-import BottomNavBar from "./bottom-navbar.comp";
+import { SideMenu } from "./side-menu.comp";
+import { TopNavBar } from "./top-navbar.comp";
+import { DrawerMenu } from "./drawer-menu.comp";
+import { BottomNavBar } from "./bottom-navbar.comp";
 
-export default function DashboardLayout() {
+export const DashboardLayout = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   const toggleDrawer = () => setOpen(!open);
@@ -34,4 +34,4 @@ export default function DashboardLayout() {
       <BottomNavBar />
     </div>
   );
-}
+};

@@ -5,7 +5,7 @@ import { Navbar, IconButton } from "@material-tailwind/react";
 import { PlusSVG } from "@/assets/svgs";
 import { NAVIGATION_DATA, NavIconButton } from "./navigation.data";
 
-export default function BottomNavBar() {
+export const BottomNavBar = () => {
   const leftIcons = NAVIGATION_DATA.filter(
     (nav) => nav.name === "Home" || nav.name === "Transactions"
   );
@@ -59,4 +59,4 @@ export default function BottomNavBar() {
       </Navbar>
     </div>
   );
-}
+};

@@ -1,3 +1,2 @@
-import DashboardLayout from "./layout/dashboard-layout/dashboard.layout";
-
-export { DashboardLayout };
+export * from './layout/dashboard/dashboard.layout'
+export * from "./layout/modal-screen/modal-screen.layout"

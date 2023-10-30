@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   Button,
   IconButton,
@@ -11,7 +11,7 @@ interface TopNavBarProps {
   toggleDrawer: () => void;
 }
 
-export default function TopNavBar(props: TopNavBarProps) {
+export const TopNavBar: FC<TopNavBarProps> = (props) => {
   const { toggleDrawer } = props;
 
   return (
@@ -65,4 +65,4 @@ export default function TopNavBar(props: TopNavBarProps) {
       </div>
     </Navbar>
   );
-}
+};

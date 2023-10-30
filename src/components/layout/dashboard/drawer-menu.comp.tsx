@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { Drawer, IconButton, Typography } from "@material-tailwind/react";
 
 interface DrawerMenuProps {
@@ -6,7 +6,7 @@ interface DrawerMenuProps {
   toggleDrawer: () => void;
 }
 
-export default function DrawerMenu(props: DrawerMenuProps) {
+export const DrawerMenu: FC<DrawerMenuProps> = (props) => {
   const { open, toggleDrawer } = props;
 
   return (
@@ -44,4 +44,4 @@ export default function DrawerMenu(props: DrawerMenuProps) {
       </div>
     </Drawer>
   );
-}
+};
