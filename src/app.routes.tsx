@@ -18,7 +18,7 @@ import {
   AddTransactionScreen,
 } from "./screens";
 
-import { DashboardLayout } from "./components";
+import { DashboardLayout, ModalScreenLayout } from "./components";
 
 const AppRoutes = createBrowserRouter(
   createRoutesFromElements(
@@ -34,7 +34,7 @@ const AppRoutes = createBrowserRouter(
         <Route path="/transactions" element={<TransactionScreen />} />
       </Route>
 
-      <Route path="/" element={<Outlet />}>
+      <Route path="/" element={<ModalScreenLayout />}>
         <Route path="/add/transaction" element={<AddTransactionScreen />} />
       </Route>
     </Route>
